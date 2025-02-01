@@ -1,7 +1,7 @@
 # Colosseum_Wireless_Network_Emulator
 This project exploits GNU Radio IEEE 802.11 transceiver to instantiate a ad hoc network via Wi-Fi on the Colosseum Wireless Network Emulator. Key tasks aim to connect nodes, make reservations, verify setup, start Wi-Fi nodes, monitor packets, configure scenarios, run scripts, analyze spectrum, and troubleshooting.
 
-In this assignment, we are going to use one of the base Colosseum scenarios (1009), which supports up to 10 nodes in the reservation. The center frequency of this scenario is 1 GHz. This scenario does not add any additional channel characteristics to the RF transmissions of the nodes (besides the contributions of the hardware components of Colosseum). Read the full specifications of this scenario at the following page: https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all- paths-0-db-1009.
+In this assignment, we are going to use one of the base Colosseum scenarios (1009), which supports up to 10 nodes in the reservation. The center frequency of this scenario is 1 GHz. This scenario does not add any additional channel characteristics to the RF transmissions of the nodes (besides the contributions of the hardware components of Colosseum). Read the full specifications of this scenario at the following page: https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009.
 
 Part 1: Connect to Colosseum Connect to the Colosseum wireless network emulator (https://experiments.colosseum.net/).
 
