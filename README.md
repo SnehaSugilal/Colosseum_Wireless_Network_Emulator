@@ -3,7 +3,7 @@ This project exploits GNU Radio IEEE 802.11 transceiver to instantiate a ad hoc 
 
 In this assignment, we are going to use one of the base Colosseum scenarios (1009), which supports up to 10 nodes in the reservation. The center frequency of this scenario is 1 GHz. This scenario does not add any additional channel characteristics to the RF transmissions of the nodes (besides the contributions of the hardware components of Colosseum). Read the full specifications of this scenario at the following page: https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009.
 
-Part 1: Connect to Colosseum Connect to the Colosseum wireless network emulator (https://experiments.colosseum.net/).
+## Part 1: Connect to Colosseum Connect to the Colosseum wireless network emulator (https://experiments.colosseum.net/).
 
 Following are the steps for the setup:
 
@@ -13,11 +13,11 @@ Following are the steps for the setup:
 - Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing- colosseum-resources Get familiar with the system and on how to make reservations:
 - Quick start guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253395- quick-start-guide
 
-Bonus Guide: 
+### Bonus Guide: 
 - Quick start guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253395-quick-start-guide
 - User guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253387-colosseum-user-guide
-  
-Part 2: Make a reservation with Wi-Fi nodes on Colosseum
+
+## Part 2: Make a reservation with Wi-Fi nodes on Colosseum
 
 - Make a 2-hour reservation under a suitable name with two colosseum nodes, Standard Radio Nodes (SRNs), with the webinar-interactive-v1 image.
 - In the reservation page, find the assigned SRNs/nodes and their hostnames by hovering over nodes.
@@ -28,7 +28,7 @@ Part 2: Make a reservation with Wi-Fi nodes on Colosseum
 
 - You can check if the RF scenario is active and running by executing the following command: "colosseumcli rf info"
 
-Part 3: Verification of the RF emulator is setup 
+## Part 3: Verification of the RF emulator is setup 
 In this step, we will verify that Colosseum RF emulator has been setup correctly. Note that you will need the two terminals of the previous step to run the following commands.
 
 - In both terminals, cd to (move to) the /root/utils directory.
@@ -39,7 +39,7 @@ In this step, we will verify that Colosseum RF emulator has been setup correctly
   
 - Once done, hit Ctrl+C in both terminals to stop the uhd_tx_tone.sh and uhd_rx_fft.sh example scripts.
 
-Part 4: Start the Wi-Fi nodes 
+## Part 4: Start the Wi-Fi nodes 
 In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note that you will need the two terminals of the previous step to run the following commands.
 
 - For each SRN, navigate to the directory /root/interactive_scripts and execute the tap_setup.sh script to setup a tap interface for the SRN (see Traffic Generation for more information on routing traffic in Colosseum): "/root/interactive_scripts/tap_setup.sh"
@@ -54,7 +54,7 @@ In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note t
 - Also observe new Wi-Fi packets being generated and sent in the previous two terminals.
 - Once done, hit Ctrl+C to stop the ping in both SRNs.
 
-Part 5: Start Colosseum Traffic Generator (TGEN) 
+## Part 5: Start Colosseum Traffic Generator (TGEN) 
 In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note that you will need the two terminals of the previous step to run the following commands.
 
 - In one of the terminals, execute the following command to start a traffic scenario through the Colosseum traffic emulator: "colosseumcli tg start 10090"
@@ -64,7 +64,7 @@ In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note t
 - Note that it takes a few minutes (~5 mins) for TGEN to initialize the traffic scenario and start transmitting packets to the SRNs.
 - Once done, hit Ctrl+C in all four terminals to stop the Wi-Fi applications and the tcpdump.
 
-Part 6: Clean up!
+## Part 6: Clean up!
 This concludes Colosseum Wi-Fi project.
 
 - Once done with experimenting, it is good practice to stop the traffic and RF and TGEN scenarios by running the following commands from in one of the previous terminals: "colosseumcli rf stop" & "colosseumcli tg stop"
