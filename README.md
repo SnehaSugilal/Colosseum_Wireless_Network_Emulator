@@ -7,7 +7,7 @@ In this assignment, we are going to use one of the base Colosseum scenarios (100
 
 Following are the steps for the setup:
 
-- Setup the Colosseum VPN: https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access
+- Setup Colosseum VPN: https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access
 - Upload your SSH public key on Colosseum: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public- keys
 - Setup your local SSH proxy: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253369-ssh-proxy-setup
 - Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing- colosseum-resources
