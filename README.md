@@ -7,12 +7,11 @@ In this assignment, we are going to use one of the base Colosseum scenarios (100
 
 Following are the steps for the setup:
 
-- Setup the Colosseum VPN: https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect- remote-vpn-access
+- Setup the Colosseum VPN: https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access
 - Upload your SSH public key on Colosseum: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public- keys
 - Setup your local SSH proxy: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253369-ssh-proxy-setup
-- Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing- colosseum-resources Get familiar with the system and on how to make reservations:
-- Quick start guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253395- quick-start-guide
-
+- Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing- colosseum-resources
+  
 ### Bonus Guide: 
 - Quick start guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253395-quick-start-guide
 - User guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253387-colosseum-user-guide
@@ -21,10 +20,10 @@ Following are the steps for the setup:
 
 - Make a 2-hour reservation under a suitable name with two colosseum nodes, Standard Radio Nodes (SRNs), with the webinar-interactive-v1 image.
 - In the reservation page, find the assigned SRNs/nodes and their hostnames by hovering over nodes.
-- At the scheduled time, open two terminals and ssh as root user into the assigned Colosseum SRNs. (PS: the password for the webinar-interactive- v1 container is sunflower: "ssh root@")
+- At the scheduled time, open two terminals and ssh as root user into the assigned Colosseum SRNs. (PS: the password for the webinar-interactive- v1 container is 'sunflower': "ssh root@<srn-hostname>")
 
-- Now start the scenario: in one of the terminals, run the following command to start a Colosseum Radio-frequency (RF) scenario through the Colosseum CLI API (see here for more information on this API): colosseumcli rf start 1009 -c The -c option ensures that the scenario automatically restarts after its completion.
-- This will engage the Colosseum RF Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario (see https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test- scenario-all-paths-0-db-1009).
+- Now start the scenario: in one of the terminals, run the following command to start a Colosseum Radio-frequency (RF) scenario through the Colosseum CLI API*: "colosseumcli rf start 1009 -c" (The -c option ensures that the scenario automatically restarts after its completion.)
+- This will engage the Colosseum RF Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario**.
 
 - You can check if the RF scenario is active and running by executing the following command: "colosseumcli rf info"
 
@@ -69,4 +68,8 @@ This concludes Colosseum Wi-Fi project.
 
 - Once done with experimenting, it is good practice to stop the traffic and RF and TGEN scenarios by running the following commands from in one of the previous terminals: "colosseumcli rf stop" & "colosseumcli tg stop"
 - Close all the previous terminals.
-- Log into the Colosseum website and terminate your reservation by clicking the red X button next to your reservatio.
+- Log into the Colosseum website and terminate your reservation by clicking the red X button next to your reservation.
+
+## References: 
+-  Colosseum CLI API: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253397-colosseum-cli
+-  Test Scenario All Paths 0 dB (1009): https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009
