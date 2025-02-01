@@ -10,7 +10,7 @@ Following are the steps for the setup:
 - Setup Colosseum VPN: https://colosseumneu.freshdesk.com/support/solutions/articles/61000285824-cisco-anyconnect-remote-vpn-access
 - Upload your SSH public key on Colosseum: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public- keys
 - Setup your local SSH proxy: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253369-ssh-proxy-setup
-- Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing- colosseum-resources
+- Access Colosseum resources: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources
   
 ### Bonus Guide: 
 - Quick start guide: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253395-quick-start-guide
