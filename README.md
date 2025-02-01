@@ -64,7 +64,7 @@ In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note t
 - Once done, hit Ctrl+C in all four terminals to stop the Wi-Fi applications and the tcpdump.
 
 ## Part 6: Clean up!
-This concludes Colosseum Wi-Fi project.
+This part concludes Colosseum Wi-Fi project.
 
 - Once done with experimenting, it is good practice to stop the traffic and RF and TGEN scenarios by running the following commands from in one of the previous terminals: "colosseumcli rf stop" & "colosseumcli tg stop"
 - Close all the previous terminals.
