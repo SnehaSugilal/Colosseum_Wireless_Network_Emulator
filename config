@@ -1,0 +1,21 @@
+# SSH Gateway
+Host colosseum-gw
+	Hostname gw.colosseum.net
+	User sugilals
+	IdentityFile /home/sneha/.ssh/id_rsa
+
+# File Proxy Server
+Host file-proxy
+	Hostname file-proxy
+	User sugilals
+	ProxyCommand ssh -W %h:%p colosseum-gw
+
+# SRNs (User Container)
+Host eece5155-bos-???
+	User root
+	StrictHostKeyChecking no
+	UserKnownHostsFile=/dev/null
+	ProxyCommand ssh -W %h:%p colosseum-gw
+	
+	#ssh root@eece5155-bos-100
+	#ssh root@eece5155-bos-103
