@@ -41,7 +41,7 @@ In this step, we will verify that Colosseum RF emulator has been setup correctly
 ## Part 4: Start the Wi-Fi nodes 
 In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note that you will need the two terminals of the previous step to run the following commands.
 
-- For each SRN, navigate to the directory /root/interactive_scripts and execute the tap_setup.sh script to setup a tap interface for the SRN (see Traffic Generation for more information on routing traffic in Colosseum): "/root/interactive_scripts/tap_setup.sh"
+- For each SRN, navigate to the directory /root/interactive_scripts and execute the tap_setup.sh script to setup a tap interface for the SRN (see Traffic Generation*** for more information on routing traffic in Colosseum): "/root/interactive_scripts/tap_setup.sh"
 - For each SRN, execute the route_setup.sh script (located in the /root/interactive_scripts directory) to setup the routing tables: /root/interactive_scripts/route_setup.sh
 - NOTE: In each of the SRN, you need to setup the route to the other SRN. The SRN IDs are created by adding 100 to the SRN number assigned to your reservation. As an example, SRN- 015 will have ID 115, hence the IP address of the tr0 interface of this node will be 192.168.115.1. In this example, the above command becomes: "/root/interactive_scripts/route_setup.sh 115"
 - In each SRN, execute the modem_start.sh script to start the Wi-Fi modem: "/root/interactive_scripts/modem_start.sh"
@@ -57,7 +57,7 @@ In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note t
 In this step, we will use the Wi-Fi nodes reserved in the previous steps. Note that you will need the two terminals of the previous step to run the following commands.
 
 - In one of the terminals, execute the following command to start a traffic scenario through the Colosseum traffic emulator: "colosseumcli tg start 10090"
-- This will engage the Colosseum Traffic Generator (TGEN) and start packet flows between Colosseum and the SRNs of your reservation based on the parameters specified in the traffic scenario (see https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test- scenario-all-paths-0-db-1009).
+- This will engage the Colosseum Traffic Generator (TGEN) and start packet flows between Colosseum and the SRNs of your reservation based on the parameters specified in the traffic scenario (see Test Scenario All Paths 0 dB (1009)**).
 - You can check if the traffic scenario is active (and running) by executing the following command: "colosseumcli tg info"
 - Now you can monitor the packet flow on the tr0 interface (i.e., the interface in which the SRNs receive/forward packets from from/to TGEN) of each SRN by running the following command on each SRN: "tcpdump -i tr0"
 - Note that it takes a few minutes (~5 mins) for TGEN to initialize the traffic scenario and start transmitting packets to the SRNs.
@@ -71,5 +71,6 @@ This part concludes Colosseum Wi-Fi project.
 - Log into the Colosseum website and terminate your reservation by clicking the red X button next to your reservation.
 
 ## References: 
--  Colosseum CLI API: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253397-colosseum-cli
--  Test Scenario All Paths 0 dB (1009): https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009
+-  *Colosseum CLI API: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253397-colosseum-cli
+-  **Test Scenario All Paths 0 dB (1009): https://colosseumneu.freshdesk.com/support/solutions/articles/61000277641-test-scenario-all-paths-0-db-1009
+-  ***Traffic Generation: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253508-traffic-generation
